@@ -2386,7 +2386,6 @@ button {
 	gap: 3px;
 }
 
-
 .performance-inner .all-shapes span {
 	position: absolute;
 	background-color: rgba(var(--white-rgb), 0.1);
@@ -2467,7 +2466,7 @@ button {
 	font-weight: 600;
 	line-height: 106.364%;
 	/* background: linear-gradient(100deg, #00abd4 -5.16%, #00abac 49.72%, #0a7 95.19%); */
-	background: linear-gradient(90deg, rgb(0, 171, 214) , rgb(0, 173, 173) , rgb(2, 253, 178),rgb(0, 171, 214) , rgb(0, 173, 173) , rgb(2, 253, 178));
+	background: linear-gradient(90deg, rgb(0, 171, 214), rgb(0, 173, 173), rgb(2, 253, 178), rgb(0, 171, 214), rgb(0, 173, 173), rgb(2, 253, 178));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2479,7 +2478,7 @@ button {
 	display: flex;
 	transition: var(--transition-3-easeInOut);
 }
-@keyframes  AnimatedGradientBgLeft {
+@keyframes AnimatedGradientBgLeft {
 	0% {
 		background-position: 0 0;
 	}
@@ -2548,12 +2547,12 @@ button {
 	z-index: 0;
 	margin-bottom: 180px;
 }
-.editor-thumbnail .thumbnail{
+.editor-thumbnail .thumbnail {
 	width: 100%;
 }
 .editor-thumbnail::after {
 	position: absolute;
-	content: '';
+	content: "";
 	left: 10px;
 	right: 0;
 	bottom: -10px;
@@ -2564,13 +2563,12 @@ button {
 	opacity: 0.1;
 	box-shadow: 0px 4px 24px 1px rgba(var(--white-rgb), 0.04);
 	z-index: -1;
-
 }
 .editor-thumbnail .before,
 .editor-thumbnail .after {
 	position: absolute;
 }
-.editor-thumbnail .before{
+.editor-thumbnail .before {
 	left: -123px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -2582,3 +2580,26 @@ button {
 	text-align: right;
 }
 /* editor-section end  */
+
+/* inner-pages-section start  */
+.inner-pages-section {
+	background: url("../images/inner-pages/bg.png") lightgray 50% / cover no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.inner-pages-section .section-header {
+	position: relative;
+}
+.inner-pages-section .section-header::before {
+	position: absolute;
+	content: "img(../)";
+	width: 160%;
+	height: 185.873px;
+}
+
+.inner-pages-section .section-header h2 {
+	color: var(--white);
+}
+/* inner-pages-section end  */
+/* inner-pages-section start  */
+/* inner-pages-section end  */
