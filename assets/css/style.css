@@ -2166,40 +2166,40 @@ button {
 	background-color: rgba(var(--black-rgb), 0.76);
 	text-align: center;
 }
-.lines {
+.hero-section .lines {
 	position: absolute;
 	inset: 0;
 	z-index: -1;
 }
-.lines .line {
+.hero-section .lines .line {
 	width: 1.2px;
 	height: 100%;
 	background-color: rgba(var(--white-rgb), 0.1);
 	position: absolute;
 }
-.lines .line-1 {
+.hero-section .lines .line-1 {
 	left: 6.7%;
 }
-.lines .line-2 {
+.hero-section .lines .line-2 {
 	left: 21.7%;
 	box-shadow: -7px -7px 14px rgba(var(--white-rgb), 0.76);
 }
-.lines .line-3 {
+.hero-section .lines .line-3 {
 	left: 36%;
 }
-.lines .line-4 {
+.hero-section .lines .line-4 {
 	left: 50%;
 	transform: translateX(-50%);
 	box-shadow: 7px 7px 14px rgba(var(--white-rgb), 0.76);
 }
-.lines .line-5 {
+.hero-section .lines .line-5 {
 	right: 36%;
 }
-.lines .line-6 {
+.hero-section .lines .line-6 {
 	right: 21%;
 	box-shadow: 7px 7px 14px rgba(var(--white-rgb), 0.76);
 }
-.lines .line-7 {
+.hero-section .lines .line-7 {
 	right: 6.8%;
 }
 .hero-content .hero-title span {
@@ -2351,8 +2351,8 @@ button {
 }
 .performance-section .performance-matter {
 	padding-top: 87px;
-	display: flex;
-	flex-wrap: nowrap;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	justify-content: space-between;
 }
 .performance-section .performance-matter .performance-item {
@@ -2361,6 +2361,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	gap: 16px;
+	text-align: center;
 }
 .performance-section .performance-matter .performance-item .performance-type {
 	color: var(--white);
@@ -2368,6 +2369,7 @@ button {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 212.5%;
+	white-space: nowrap;
 }
 .performance-section .performance-matter .performance-item .performance-item-circle {
 	width: 110px;
@@ -2384,8 +2386,7 @@ button {
 	gap: 3px;
 }
 
-.performance-inner .all-shapes {
-}
+
 .performance-inner .all-shapes span {
 	position: absolute;
 	background-color: rgba(var(--white-rgb), 0.1);
@@ -2394,30 +2395,190 @@ button {
 .performance-inner .all-shapes .elips-shape-1 {
 	width: 26px;
 	height: 26px;
-	left: 2%;
-	top: 47%;
+	left: 52px;
+	top: 250px;
 }
 .performance-inner .all-shapes .elips-shape-2 {
 	width: 14px;
 	height: 14px;
-	left: 40%;
-	top: 11%;
+	left: 244px;
+	top: 123px;
 }
 .performance-inner .all-shapes .elips-shape-3 {
 	width: 60px;
 	height: 60px;
-	left: 75%;
-	bottom: 35%;
+	left: 418px;
+	bottom: 150px;
 }
 .performance-inner .all-shapes .elips-shape-4 {
 	width: 288px;
 	height: 288px;
-	left: 5%;
-	bottom: -15%;
+	left: 50px;
+	bottom: 20px;
 	box-shadow: 1px 2px 24px 0px rgba(var(--black-rgb), 0.04);
 }
 .performance-inner .rocket {
-	z-index: 999;
+	z-index: 1;
 	position: relative;
+	left: -30px;
+	bottom: -80px;
 }
 /* performance-section end  */
+
+/* readymade-section start  */
+.readymade-section {
+	position: relative;
+	background: url("../images/readymade/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+}
+
+.readymade-section .lines .line {
+	position: absolute;
+	content: "";
+	width: 1px;
+	height: 100%;
+	top: 0;
+	background: rgba(var(--white-rgb), 0.06);
+	z-index: 999;
+}
+.readymade-section .lines .line-1 {
+	left: 6.71875%;
+}
+
+.readymade-section .lines .line-2 {
+	left: 35.57%;
+}
+.readymade-section .lines .line-3 {
+	right: 35.57%;
+}
+.readymade-section .lines .line-4 {
+	right: 6.71875%;
+}
+
+.readymade-section .container {
+	max-width: 1560px;
+}
+.readymade-content .total-pages {
+	font-size: 220px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 106.364%;
+	/* background: linear-gradient(100deg, #00abd4 -5.16%, #00abac 49.72%, #0a7 95.19%); */
+	background: linear-gradient(90deg, rgb(0, 171, 214) , rgb(0, 173, 173) , rgb(2, 253, 178),rgb(0, 171, 214) , rgb(0, 173, 173) , rgb(2, 253, 178));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+	animation-duration: 3s;
+	background-size: 600% 100%;
+	animation: AnimatedGradientBgLeft 3s linear infinite;
+	-webkit-animation: AnimatedGradientBgLeft 3s linear infinite;
+	display: flex;
+	transition: var(--transition-3-easeInOut);
+}
+@keyframes  AnimatedGradientBgLeft {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% 0;
+	}
+}
+.readymade-content .total-pages span {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 160px;
+}
+.readymade-content p {
+	padding-top: 10px;
+	color: var(--white);
+	font-size: 46px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130.435%;
+}
+.readymade-content .categories {
+	padding-top: 130px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 34px;
+}
+.readymade-content .categories .category {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 34px;
+}
+.readymade-content .categories .category .thumbnail {
+	width: 84px;
+	height: 84px;
+	border-radius: 20px;
+	background: linear-gradient(100deg, #00abd4 -5.16%, #00ac8d 95.19%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.readymade-content .categories .category .info-lists {
+	color: rgba(var(--white-rgb), 0.9);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+.readymade-pages {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	gap: 60px;
+}
+.readymade-pages .readymade-page,
+.readymade-pages .readymade-page img {
+	border-radius: 20px;
+}
+/* readymade-section end  */
+
+/* editor-section start  */
+.editor-thumbnail {
+	position: relative;
+	z-index: 0;
+	margin-bottom: 180px;
+}
+.editor-thumbnail .thumbnail{
+	width: 100%;
+}
+.editor-thumbnail::after {
+	position: absolute;
+	content: '';
+	left: 10px;
+	right: 0;
+	bottom: -10px;
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	border: 2px solid rgba(0, 15, 25, 0.34);
+	opacity: 0.1;
+	box-shadow: 0px 4px 24px 1px rgba(var(--white-rgb), 0.04);
+	z-index: -1;
+
+}
+.editor-thumbnail .before,
+.editor-thumbnail .after {
+	position: absolute;
+}
+.editor-thumbnail .before{
+	left: -123px;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: left;
+}
+.editor-thumbnail .after {
+	right: -113px;
+	bottom: -180px;
+	text-align: right;
+}
+/* editor-section end  */
