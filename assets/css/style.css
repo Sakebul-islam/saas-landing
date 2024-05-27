@@ -2601,7 +2601,6 @@ button {
 }
 .inner-pages-slider-up .swiper-wrapper,
 .inner-pages-slider-down .swiper-wrapper {
-	-webkit-transition-timing-function: linear !important;
 	transition-timing-function: linear !important;
 	position: relative;
 }
