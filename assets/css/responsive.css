@@ -1,4 +1,11 @@
 @media (max-width: 1400px) {
+	.features-card {
+		padding: 20px 30px;
+		gap: 70px;
+	}
+	.features-content .key-features li img {
+		margin-right: 10px;
+	}
 }
 
 @media (max-width: 1199px) {
@@ -39,6 +46,16 @@
 		max-width: 50%;
 	}
 	/* editor-section end  */
+
+	/* inner-pages-section start  */
+	.features-wrapper {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+	.features-card {
+		padding: 20px 30px;
+		gap: 50px;
+	}
+	/* inner-pages-section end  */
 }
 @media (max-width: 1200px) {
 	.performance-inner .rocket {
@@ -48,6 +65,11 @@
 	.performance-section .performance-matter .performance-item .performance-item-circle {
 		width: 100px;
 		height: 100px;
+	}
+	.features-content .key-features {
+		flex-direction: column;
+		align-items: start;
+		gap: 10px;
 	}
 }
 @media (max-width: 1024px) {
@@ -165,6 +187,12 @@
 		font-size: 14px;
 	}
 	/* performance-section end  */
+	/* inner-pages-section start  */
+	.features-card {
+		padding: 20px 30px;
+		gap: 50px;
+	}
+	/* inner-pages-section end  */
 }
 
 @media (max-width: 767px) {
@@ -299,6 +327,48 @@
 		max-width: 40%;
 	}
 	/* editor-section end  */
+
+	/* inner-pages-section start  */
+	.features-content {
+		padding-top: 40px;
+	}
+	.features-content .rating {
+		padding-top: 40px;
+	}
+	.features-content .key-features {
+		flex-direction: column;
+		align-items: start;
+		gap: 10px;
+		font-size: 17px;
+	}
+	.features-content .key-features li img {
+		max-width: 30px;
+		max-height: 30px;
+		margin-right: 10px;
+	}
+	.progress-content .progress-info {
+		font-size: 15px;
+	}
+	.features-card .card-body .card-content .title {
+		font-size: 16px;
+	}
+
+	.features-wrapper {
+		gap: 20px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.section-header .sub-title {
+		font-size: 17px;
+	}
+	.section-header .sub-title img {
+		max-width: 30px;
+		max-height: 30px;
+	}
+	.features-section .section-header p {
+		font-size: 16px;
+	}
+
+	/* inner-pages-section end  */
 }
 
 @media (max-width: 575px) {
@@ -335,6 +405,12 @@
 		max-width: 25%;
 	}
 	/* editor-section end  */
+
+	/* inner-pages-section start  */
+	.features-wrapper {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+	/* inner-pages-section end  */
 }
 
 @media screen and (max-width: 375px) {
