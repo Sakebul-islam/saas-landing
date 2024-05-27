@@ -2605,10 +2605,10 @@ button {
 	transition-timing-function: linear !important;
 	position: relative;
 }
-.inner-pages-slider-up .swiper-wrapper .swiper-slide,
-.inner-pages-slider-down .swiper-wrapper .swiper-slide {
+.inner-pages-slider-up .swiper-slide,
+.inner-pages-slider-down .swiper-slide {
 	text-align: center;
-	width: auto !important;
+	width: auto;
 }
 .inner-pages-slider-up {
 	margin-bottom: 34px;
