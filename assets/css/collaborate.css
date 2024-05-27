@@ -2647,18 +2647,6 @@ button {
   color: var(--white);
 }
 
-.inner-pages-slider-up .swiper-wrapper,
-.inner-pages-slider-down .swiper-wrapper {
-  transition-timing-function: linear !important;
-  position: relative;
-}
-
-.inner-pages-slider-up .swiper-slide,
-.inner-pages-slider-down .swiper-slide {
-  text-align: center;
-  width: auto;
-}
-
 .inner-pages-slider-up {
   margin-bottom: 34px;
 }
