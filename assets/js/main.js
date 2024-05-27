@@ -290,4 +290,34 @@
 			});
 		},
 	});
+
+	//top
+	var swiper = new Swiper(".inner-pages-slider-up", {
+		spaceBetween: 20,
+		centeredSlides: true,
+    loop: true,
+		speed: 8000,
+		autoplay: {
+			delay: 1,
+      reverseDirection: false,
+		},
+		slidesPerView: 'auto',
+		allowTouchMove: false,
+		disableOnInteraction: true,
+	});
+
+	// Bottom
+	var swiper = new Swiper(".inner-pages-slider-down", {
+		spaceBetween: 20,
+		centeredSlides: true,
+    loop: true,
+		speed: 8000,
+		autoplay: {
+			delay: 1,
+			reverseDirection: true,
+		},
+		slidesPerView: 'auto',
+		allowTouchMove: false,
+		disableOnInteraction: true,
+	});
 })(jQuery);

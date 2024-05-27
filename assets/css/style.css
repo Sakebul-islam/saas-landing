@@ -2590,15 +2590,28 @@ button {
 .inner-pages-section .section-header {
 	position: relative;
 }
-.inner-pages-section .section-header::before {
+.inner-pages-section .section-header .title-shape {
 	position: absolute;
-	content: "img(../)";
-	width: 160%;
-	height: 185.873px;
+	top: -50%;
+	left: 0;
 }
 
 .inner-pages-section .section-header h2 {
 	color: var(--white);
+}
+.inner-pages-slider-up .swiper-wrapper,
+.inner-pages-slider-down .swiper-wrapper {
+	-webkit-transition-timing-function: linear !important;
+	transition-timing-function: linear !important;
+	position: relative;
+}
+.inner-pages-slider-up .swiper-wrapper .swiper-slide,
+.inner-pages-slider-down .swiper-wrapper .swiper-slide {
+	text-align: center;
+	width: auto !important;
+}
+.inner-pages-slider-up {
+	margin-bottom: 34px;
 }
 /* inner-pages-section end  */
 /* inner-pages-section start  */
