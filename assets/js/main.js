@@ -41,6 +41,51 @@
     allowTouchMove: false,
     disableOnInteraction: true,
   });
+
+  // CounterUp Animation;
+  function startCounterAnimation() {
+    $('.count').each(function () {
+      $(this)
+        .prop('Counter', 0)
+        .animate(
+          {
+            Counter: $(this).text(),
+          },
+          {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+              now = Number(Math.ceil(now)).toLocaleString('en');
+              $(this).text(now);
+            },
+          }
+        );
+    });
+  }
+
+  // Set up IntersectionObserver
+  const observe = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounterAnimation();
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    }
+  );
+
+  // Observe the .performance-section
+  const performanceSection = document.querySelector('.performance-section');
+  if (performanceSection) {
+    observe.observe(performanceSection);
+  }
+
   // ---------------------------------------------------------------------
 
   const options = {

@@ -2989,7 +2989,29 @@ button {
 	font-style: normal;
 	font-weight: 500;
 	line-height: 140%;
+	transition:var(--transition);
+}
+
+.nav-link .tab-head {
 	white-space: nowrap;
+}
+
+.nav-link .tab-content {
+	font-size: 15px;
+	visibility: hidden;
+	height: 0;
+	transition-delay: .5s;
+	transition: var(--transition);
+}
+
+.nav-link.active .tab-content {
+	visibility: visible;
+	height: 100%;
+	transition: var(--transition-5-ease);
+	-webkit-transition: var(--transition-5-ease);
+	-moz-transition: var(--transition-5-ease);
+	-ms-transition: var(--transition-5-ease);
+	-o-transition: var(--transition-5-ease);
 }
 
 .transformation-buttons {
