@@ -312,4 +312,16 @@
       });
     },
   });
+
+
+  gsap.to('.rocket', {
+    xPercent: 150,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".rocket",
+      start: "top center",
+      end: "bottom top",
+      scrub: true
+    }
+  })
 })(jQuery);
