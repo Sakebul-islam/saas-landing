@@ -332,7 +332,7 @@
       // end: "bottom top", // End the animation when the bottom of the viewport hits the top of the rocket
       end: "bottom+=50% top",
       scrub: true, // Smooth scrubbing
-      markers:true,
+      markers:false,
     },
     x: window.innerWidth - 70, // Move to the right edge (adjust 70 based on your rocket's width)
     y: -window.innerHeight + 70, // Move to the top edge (adjust 70 based on your rocket's height)
