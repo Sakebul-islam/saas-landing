@@ -2720,7 +2720,7 @@ button {
 
 .inner-pages-slider-up .swiper-slide,
 .inner-pages-slider-down .swiper-slide {
-	width: fit-content;
+	width: auto;
 }
 
 .inner-pages-slider-up {
