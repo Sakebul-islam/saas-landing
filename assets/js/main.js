@@ -314,14 +314,28 @@
   });
 
 
-  gsap.to('.rocket', {
-    xPercent: 150,
-    ease: "none",
+  // gsap.to('.rocket', {
+  //   xPercent: 150,
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: ".rocket",
+  //     start: "top center",
+  //     end: "bottom top",
+  //     scrub: true
+  //   }
+  // })
+
+  gsap.to(".rocket", {
     scrollTrigger: {
       trigger: ".rocket",
-      start: "top center",
-      end: "bottom top",
-      scrub: true
-    }
-  })
+      start: "top center", // Start the animation when the rocket is at the center of the viewport
+      // end: "bottom top", // End the animation when the bottom of the viewport hits the top of the rocket
+      end: "bottom+=50% top",
+      scrub: true, // Smooth scrubbing
+      markers:true,
+    },
+    x: window.innerWidth - 70, // Move to the right edge (adjust 70 based on your rocket's width)
+    y: -window.innerHeight + 70, // Move to the top edge (adjust 70 based on your rocket's height)
+    ease: "power2.inOut"
+  });
 })(jQuery);
