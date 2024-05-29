@@ -2272,6 +2272,9 @@ button {
 .feature-section {
 	margin-top: -190px;
 }
+.feature-wrapper-perspective {
+	perspective: 100em;
+}
 
 .feature-wrapper {
 	border-radius: 30px;
@@ -2626,6 +2629,9 @@ button {
 	gap: 60px;
 }
 
+.readymade-pages .readymade-page{
+	perspective: 100em;
+}
 .readymade-pages .readymade-page,
 .readymade-pages .readymade-page img {
 	border-radius: 20px;

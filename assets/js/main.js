@@ -215,28 +215,65 @@
 	});
 
 	// Animate the rotation on scroll
-  gsap.set(".feature-wrapper", { rotateX: 40, scale: 0.95 });
+  gsap.set(".feature-wrapper", { rotateX:30, scale: 0.90 });
 
   // Create a timeline for the animations
   const tl = gsap.timeline({
     scrollTrigger: {
-      markers: true,
+      markers: false,
       trigger: ".feature-wrapper",
       start: "top 70%", 
       end: "bottom top",
       toggleActions: "play none none reverse",
     }
   });
-
+  
   // Add the scale animation with a delay
   tl.to(".feature-wrapper", {
-    rotateX: 0,
-    duration: 1,
+    scale: 1,
+    duration: 1.5,
     ease: "power2.inOut",
   })
   .to(".feature-wrapper", {
-    scale: 1,
+    rotateX: 0,
     duration: 1,
     ease: "power2.inOut",
   }, "-=0.5");
+
+
+
+
+
+
+
+
+  // Select all .readymade-page img elements
+  const readymadeImages = document.querySelectorAll('.readymade-page img');
+
+  readymadeImages.forEach((img) => {
+
+    gsap.set(img, { rotateX: 30, scale: 0.8 });
+
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: img,
+        start: "top 70%", 
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+
+    tl.to(img, {
+      scale: 1,
+      duration: 1,
+      ease: "power2.inOut",
+    })
+    .to(img, {
+      rotateX: 0,
+      duration: 1,
+      ease: "power2.inOut",
+    }, "-=0.5"); 
+  });
 })(jQuery);
