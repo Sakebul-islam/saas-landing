@@ -325,11 +325,16 @@
 		top: 300px;
 	}
 	.performance-inner .rocket {
-		z-index: 1;
-		position: relative;
-		left: -20px;
-		bottom: 0px;
-	}
+    z-index: 1;
+    position: relative;
+    left: -70px;
+    bottom: -50px;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
 
 	.performance-section .performance-matter .performance-item {
 		gap: 8px;
