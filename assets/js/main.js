@@ -128,11 +128,11 @@
 	});
 
 	let smoother = ScrollSmoother.create({
-	  smooth: 2,
-	  effects: true,
-	  smoothTouch: 0.1,
-	  normalizeScroll: false,
-	  ignoreMobileResize: true,
+		smooth: 2,
+		effects: true,
+		smoothTouch: 0.1,
+		normalizeScroll: false,
+		ignoreMobileResize: true,
 	});
 
 	function smoothSctoll() {
@@ -204,19 +204,39 @@
 		scrollTrigger: {
 			trigger: ".performance-section",
 			start: "top+=30% center",
-			// end: "bottom top",
 			end: "bottom+=50% top",
 			scrub: true,
 			markers: false,
 		},
-		// x: window.innerWidth - 70,
-		// y: -window.innerHeight + 70,
-		// ease: "power2.inOut",
 		duration: 1,
 		x: innerWidth * 1,
 		y: -innerWidth * 1,
-		// rotation: -360,
-		opacity: 1,
 		ease: "none",
 	});
+
+	// Animate the rotation on scroll
+  gsap.set(".feature-wrapper", { rotateX: 40, scale: 0.95 });
+
+  // Create a timeline for the animations
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      markers: true,
+      trigger: ".feature-wrapper",
+      start: "top 70%", 
+      end: "bottom top",
+      toggleActions: "play none none reverse",
+    }
+  });
+
+  // Add the scale animation with a delay
+  tl.to(".feature-wrapper", {
+    rotateX: 0,
+    duration: 1,
+    ease: "power2.inOut",
+  })
+  .to(".feature-wrapper", {
+    scale: 1,
+    duration: 1,
+    ease: "power2.inOut",
+  }, "-=0.5");
 })(jQuery);
