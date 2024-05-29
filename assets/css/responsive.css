@@ -6,6 +6,49 @@
 	.features-content .key-features li img {
 		margin-right: 10px;
 	}
+	/* features-highlight area start  */
+	.highlight {
+		border-radius: 20px;
+	}
+	.highlight.seo-expert .highlight-2-shape-1 {
+		max-width: 30%;
+	}
+	.highlight.seo-expert .highlight-2-shape-2 {
+		max-width: 30%;
+	}
+	.highlight.seo-expert .highlight-2-shape-3 {
+		bottom: 150px;
+		left: 50%;
+		max-width: 60%;
+		transform: translateX(-50%);
+	}
+	.highlight.seo-expert .thumbnail {
+		max-width: 65%;
+		border-radius: 20px 0;
+	}
+	.highlight.support .highlight-4-shape-1 {
+		max-width: 15%;
+		top: 46%;
+	}
+	.highlight.support .highlight-4-shape-2 {
+		max-width: 15%;
+		top: 53%;
+	}
+	.highlight.support .thumbnail {
+		max-width: 90%;
+	}
+	.highlight.demo-import .thumbnail {
+		border-radius: 5px;
+	}
+	.highlight.demo-import .highlight-5-shape-1 {
+		top: 38%;
+		right: 30px;
+		max-width: 30%;
+	}
+	.highlight.responsive .thumbnail {
+		max-width: 80%;
+	}
+	/* features-highlight area end  */
 }
 
 @media (max-width: 1199px) {
@@ -57,6 +100,9 @@
 	}
 	/* inner-pages-section end  */
 	/* transformation-section start  */
+	.nav-link .tab-head {
+		gap: 12px;
+	}
 	.transformation-content .tab-pane {
 		padding: 50px 0 0 50px;
 	}
@@ -204,6 +250,37 @@
 		padding: 50px 0 0 50px;
 	}
 	/* transformation-section end  */
+
+	/* features-highlight area start here */
+	.highlight.life-time-update .thumbnail {
+		max-width: 480px;
+	}
+	.highlight.life-time-update .highlight-1-shape-1 {
+		max-width: 350px;
+		width: 100%;
+	}
+	.highlight.seo-expert .highlight-2-shape-1 {
+		max-width: 25%;
+	}
+	.highlight.seo-expert .thumbnail {
+		max-width: 350px;
+	}
+	.highlight.seo-expert .highlight-2-shape-3 {
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 150px;
+	}
+	.highlight.support .highlight-4-shape-1 {
+		max-width: 12%;
+		left: 35px;
+		top: 33%;
+	}
+	.highlight.support .highlight-4-shape-2 {
+		max-width: 12%;
+		right: 35px;
+		top: 40%;
+	}
+	/* features-highlight area end here */
 }
 
 @media (max-width: 767px) {
@@ -522,6 +599,44 @@
 	/* features-highlight end  */
 }
 
+@media screen and (max-width: 450px) {
+	.highlight {
+		max-height: 400px;
+	}
+	.highlight.life-time-update .thumbnail {
+		max-width: 50%;
+	}
+	.highlight.life-time-update .highlight-1-shape-1 {
+		max-width: 50%;
+		top: 50px;
+	}
+	.highlight.seo-expert .highlight-2-shape-3 {
+		bottom: 90px;
+	}
+	.highlight.seo-expert .thumbnail {
+		max-width: 60%;
+	}
+	.highlight.help-centre .thumbnail img {
+		max-width: 85%;
+	}
+	.highlight.support .highlight-4-shape-1 {
+		top: 48%;
+	}
+	.highlight.support .highlight-4-shape-2 {
+		top: 54%;
+	}
+	.highlight.support .thumbnail {
+		max-width: 70%;
+	}
+  .highlight.demo-import .highlight-5-shape-1 {
+    max-width: 30%;
+    right: 30px;
+    top: 40%;
+  }
+  .highlight.responsive .thumbnail {
+    max-width: 70%;
+  }
+}
 @media screen and (max-width: 375px) {
 	.offcanvas {
 		width: 320px !important;

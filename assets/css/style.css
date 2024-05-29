@@ -10,6 +10,9 @@
 	--black-rgb: 0, 0, 0;
 	--white: #fff;
 	--white-rgb: 255, 255, 255;
+	--yellow-color: #ecb13e;
+	--paragraph-light: #ffffffb2;
+
 
 	/* transition */
 	--transition: all 0.3s;
@@ -2055,7 +2058,7 @@ button {
 /* Sidebar-area start  */
 .sidebar-area {
 	z-index: 99999;
-	background-color: var(--main-color);
+	background-color: #151314 !important;
 }
 
 .sidebar__socials ul {
@@ -2109,7 +2112,7 @@ button {
 }
 
 .sidebar__body .mean-container .mean-nav {
-	background-color: var(--main-color);
+	background-color: #151314 !important;
 }
 
 .sidebar__body .mean-container .mean-nav ul li a.mean-expand {
@@ -3032,6 +3035,9 @@ button {
 	flex-direction: column;
 	justify-content: space-between;
 }
+.highlight.help-centre .thumbnail {
+	text-align: center;
+}
 .highlight.help-centre .content h3 {
 	color: #000f19;
 }
@@ -3095,13 +3101,14 @@ button {
 .highlight.responsive {
 	background: linear-gradient(136deg, #0064d9 -55.49%, rgba(212, 89, 255, 0.8) 131.43%);
 }
-.highlight.responsive .thumbnail{
+.highlight.responsive .thumbnail {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 453px;
 	width: 100%;
+	text-align: center;
 }
 /* features-highlight end  */
 
