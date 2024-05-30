@@ -2368,6 +2368,7 @@ button {
 	position: absolute;
 	top: 84px;
 	left: 305px;
+	filter: drop-shadow(1px 4px 24px rgba(0, 0, 0, 0.10));
 }
 
 /* unique-section end  */
