@@ -367,12 +367,12 @@
 	// Create the scroll-triggered animation
 	gsap.to(image, {
 		y: 0,
-		scale:.6,
+		scale:.8,
 		opacity: 1, 
 		duration: 1.5,
 		ease: "power2.inOut",
 		scrollTrigger: {
-			markers: true,
+			markers: false,
 			trigger: '.highlight.demo-import',
 			start: "top 50%",
 			end: "bottom top",
