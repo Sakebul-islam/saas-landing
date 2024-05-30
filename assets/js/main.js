@@ -153,8 +153,6 @@
 	}
 	smoothSctoll();
 
-	// GSAP Animation area end here ***
-
 	ScrollTrigger.matchMedia({
 		"(min-width: 768px)": function () {
 			gsap.to(".readymade-pages", {
@@ -200,6 +198,7 @@
 		});
 	}
 
+	// roket item flying effect
 	gsap.to(".rocket", {
 		scrollTrigger: {
 			trigger: ".performance-section",
@@ -214,66 +213,180 @@
 		ease: "none",
 	});
 
-	// Animate the rotation on scroll
-  gsap.set(".feature-wrapper", { rotateX:30, scale: 0.90 });
+	// item rotate and zoom effect
+	gsap.set(".feature-wrapper", {rotateX: 30, scale: 0.9});
 
-  // Create a timeline for the animations
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      markers: false,
-      trigger: ".feature-wrapper",
-      start: "top 70%", 
-      end: "bottom top",
-      toggleActions: "play none none reverse",
-    }
-  });
-  
-  // Add the scale animation with a delay
-  tl.to(".feature-wrapper", {
-    scale: 1,
-    duration: 1.5,
-    ease: "power2.inOut",
-  })
-  .to(".feature-wrapper", {
-    rotateX: 0,
-    duration: 1,
-    ease: "power2.inOut",
-  }, "-=0.5");
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			markers: false,
+			trigger: ".feature-wrapper",
+			start: "top 70%",
+			end: "bottom top",
+			toggleActions: "play none none reverse",
+		},
+	});
+	tl.to(".feature-wrapper", {
+		scale: 1,
+		duration: 1.2,
+		ease: "power2.inOut",
+	}).to(
+		".feature-wrapper",
+		{
+			rotateX: 0,
+			duration: 1,
+			ease: "power2.inOut",
+		},
+		"-=0.5"
+	);
 
+	// item rotate and zoom effect
+	const readymadeImages = document.querySelectorAll(".readymade-page img");
 
+	readymadeImages.forEach((img) => {
+		gsap.set(img, {rotateX: 30, scale: 0.8});
 
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: img,
+				start: "top 70%",
+				end: "bottom top",
+				toggleActions: "play none none reverse",
+			},
+		});
 
+		tl.to(img, {
+			scale: 1,
+			duration: 1,
+			ease: "power2.inOut",
+		}).to(
+			img,
+			{
+				rotateX: 0,
+				duration: 1,
+				ease: "power2.inOut",
+			},
+			"-=0.5"
+		);
+	});
 
+	// item come from right side
+	const left = document.querySelectorAll(".outer-thumbnail, .highlight-4-shape-2");
+	if (left.length > 0) {
+		left.forEach((element) => {
+			gsap.set(element, {x: "100vw", opacity: 0});
+			gsap.to(element, {
+				x: 0,
+				opacity: 1,
+				duration: 2,
+				ease: "power2.inOut",
+				scrollTrigger: {
+					markers: false,
+					trigger: element,
+					start: "top 85%",
+					end: "bottom top",
+					toggleActions: "play none none reverse",
+				},
+			});
+		});
+	}
 
+	// item come from left side
+	const elements = document.querySelectorAll(".highlight-2-shape-3, .highlight-1-shape-1, .highlight-4-shape-1");
+	if (elements.length > 0) {
+		elements.forEach((element) => {
+			gsap.set(element, {x: "-100%", opacity: 0});
 
+			gsap.to(element, {
+				x: 0,
+				opacity: 1,
+				duration: 1,
+				ease: "power2.inOut",
+				scrollTrigger: {
+					markers: false,
+					trigger: element,
+					start: "top 85%",
+					end: "bottom top",
+					toggleActions: "play none none reverse",
+				},
+			});
+		});
+	}
 
-  // Select all .readymade-page img elements
-  const readymadeImages = document.querySelectorAll('.readymade-page img');
+	const zoom = document.querySelectorAll(".highlight-3-shape-1, .highlight.responsive .thumbnail");
+	if (zoom.length > 0) {
+		zoom.forEach((element) => {
+			gsap.set(element, {opacity: 0, scale: 0});
+			gsap.to(element, {
+				scale: 1,
+				opacity: 1,
+				duration: 1.5,
+				ease: "power2.inOut",
+				scrollTrigger: {
+					markers: false,
+					trigger: element,
+					start: "top 85%",
+					end: "bottom top",
+					toggleActions: "play none none reverse",
+				},
+			});
+		});
+	}
 
-  readymadeImages.forEach((img) => {
+	const popUp = document.querySelectorAll(".highlight.support .thumbnail");
+	if (popUp.length > 0) {
+		popUp.forEach((element) => {
+			gsap.set(element, {
+				y: "100%",
+				opacity: 0,
+			});
 
-    gsap.set(img, { rotateX: 30, scale: 0.8 });
+			gsap.to(element, {
+				y: 0,
+				opacity: 1,
+				duration: 1.5,
+				ease: "power2.inOut",
+				stagger: 0.5,
+				scrollTrigger: {
+					markers: false,
+					trigger: ".highlight.support",
+					start: "top 85%",
+					end: "bottom top",
+					toggleActions: "play none none reverse",
+				},
+			});
+		});
+	}
 
+	const image = document.querySelector(".highlight-5-shape-1");
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: img,
-        start: "top 70%", 
-        end: "bottom top",
-        toggleActions: "play none none reverse",
-      }
-    });
+	// Set initial state
+	gsap.set(image, {
+		y: "100%", // Start position from bottom
+	});
 
-
-    tl.to(img, {
-      scale: 1,
-      duration: 1,
-      ease: "power2.inOut",
-    })
-    .to(img, {
-      rotateX: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    }, "-=0.5"); 
-  });
+	// Create the scroll-triggered animation
+	gsap.to(image, {
+		y: 0,
+		scale:.6,
+		opacity: 1, 
+		duration: 1.5,
+		ease: "power2.inOut",
+		scrollTrigger: {
+			markers: true,
+			trigger: '.highlight.demo-import',
+			start: "top 50%",
+			end: "bottom top",
+			toggleActions: "play none none reverse",
+		},
+		onComplete: () => {
+			gsap.to(image, {
+				scale: 1, 
+				duration: 0.2,
+				ease: "power1.inOut",
+				yoyo: true,
+				repeat: 1,
+			});
+		},
+	});
+	// GSAP Animation area end here ***
 })(jQuery);

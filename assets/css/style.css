@@ -1439,6 +1439,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	/* will-change: transform; */
+	-webkit-user-drag: none;
 }
 
 button {
@@ -3210,7 +3211,8 @@ button {
 	background: linear-gradient(92deg, rgba(0, 206, 194, 0) 0%, rgba(0, 131, 226, 0) 100%);
 }
 .transformation-buttons .nav-link.active:nth-child(4) {
-	background: linear-gradient(92deg, rgba(0, 206, 194, 1) 0%, rgba(0, 131, 226, 1) 100%);
+	/* background: linear-gradient(92deg, rgba(0, 206, 194, 1) 0%, rgba(0, 131, 226, 1) 100%); */
+	background: linear-gradient(92deg, rgba(208, 107, 255,1) 0%, rgba(126, 63, 255,1) 100%);
 }
 
 /* title area  */
