@@ -2189,6 +2189,16 @@ button {
 	color: var(--black);
 }
 
+.section-header .header-p {
+	color: rgba(var(--black-rgb), 0.6);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+	padding-top: 30px;
+  }
+  
+
 /* section header end*/
 
 /* hero-section start  */
